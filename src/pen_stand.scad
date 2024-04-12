@@ -1,15 +1,18 @@
-$fn = 50;
+$fn = 30;
 
-difference(){
+minkowski(){
 
-	minkowski(){
-		sphere(r = 1.5);
-		cylinder(h = 100, r = 32.5);
-	}
+	sphere(r = 1.5, $fn = 20);
 
-	translate([0, 0, 3]){
+	difference(){
 
-		cylinder(h = 100, r = 32.5-3);
+			cylinder(h = 100, r = 32.5);
+
+		translate([0, 0, 3]){
+
+			cylinder(h = 100, r = 32.5-3);
+
+		}
 
 	}
 
