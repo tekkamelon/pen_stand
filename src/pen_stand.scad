@@ -1,4 +1,8 @@
-$fn = 30;
+$fn = 60;
+
+height = 100;
+radius = 32.5;
+thickness = 3;
 
 minkowski(){
 
@@ -6,11 +10,11 @@ minkowski(){
 
 	difference(){
 
-			cylinder(h = 100, r = 32.5);
+		cylinder(h = height, r = radius);
 
-		translate([0, 0, 3]){
+		translate([0, 0, thickness]){
 
-			cylinder(h = 100, r = 32.5-3);
+			cylinder(h = height, r = radius-thickness);
 
 		}
 
